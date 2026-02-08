@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,108 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoodTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qc0-r8-SjI">
+                                <rect key="frame" x="0.0" y="118" width="393" height="734"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Dhf-og-XgK">
+                                        <rect key="frame" x="80.666666666666671" y="0.0" width="231.66666666666663" height="244.66666666666666"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood Tracker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7d-Sk-WcJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="231.66666666666666" height="244.66666666666666"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="rdB-DT-KCS">
+                                        <rect key="frame" x="30" y="244.66666666666669" width="333" height="244.66666666666669"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feeling: Happy 😊" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKS-2B-sd6">
+                                                <rect key="frame" x="66.000000000000014" y="0.0" width="201.33333333333337" height="117.33333333333333"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="61" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="c1N-br-nFi">
+                                                <rect key="frame" x="30" y="127.33333333333331" width="273" height="117.33333333333331"/>
+                                                <color key="minimumTrackTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="maximumTrackTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <action selector="moodSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="WDD-PJ-Gjy"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="c1N-br-nFi" firstAttribute="leading" secondItem="rdB-DT-KCS" secondAttribute="leading" constant="30" id="0wx-xg-0Jf"/>
+                                            <constraint firstAttribute="trailing" secondItem="c1N-br-nFi" secondAttribute="trailing" constant="30" id="9ND-nh-jaF"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="sHT-KG-7OS">
+                                        <rect key="frame" x="30" y="489.33333333333343" width="333" height="244.66666666666669"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1tJ-He-6b4">
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="122.33333333333333"/>
+                                                <subviews>
+                                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Amc-DJ-GVa">
+                                                        <rect key="frame" x="0.0" y="0.0" width="333" height="50"/>
+                                                    </datePicker>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5U-PW-MzD">
+                                                        <rect key="frame" x="112" y="49.999999999999993" width="109" height="72.333333333333314"/>
+                                                        <color key="backgroundColor" red="0.96416015624999996" green="0.52816615125886224" blue="0.87930373850390475" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Save Mood" cornerStyle="medium">
+                                                            <backgroundConfiguration key="background">
+                                                                <color key="strokeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </backgroundConfiguration>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="saveMood:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5bQ-dM-hyf"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you feel?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Sw-V9-Tmj">
+                                                <rect key="frame" x="100.00000000000001" y="122.33333333333326" width="133.33333333333337" height="122.33333333333331"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="rdB-DT-KCS" firstAttribute="leading" secondItem="qc0-r8-SjI" secondAttribute="leading" constant="30" id="6sS-Dy-VOs"/>
+                                    <constraint firstItem="sHT-KG-7OS" firstAttribute="leading" secondItem="qc0-r8-SjI" secondAttribute="leading" constant="30" id="IeW-w0-lpW"/>
+                                    <constraint firstAttribute="trailing" secondItem="rdB-DT-KCS" secondAttribute="trailing" constant="30" id="iuJ-dS-MbD"/>
+                                    <constraint firstAttribute="trailing" secondItem="sHT-KG-7OS" secondAttribute="trailing" constant="30" id="mGr-22-lvb"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.96112459421157836" green="0.72824273826534558" blue="0.90958297417537048" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="qc0-r8-SjI" secondAttribute="bottom" id="Mqs-mc-nS9"/>
+                            <constraint firstAttribute="trailing" secondItem="qc0-r8-SjI" secondAttribute="trailing" id="UPk-yN-tmp"/>
+                            <constraint firstItem="qc0-r8-SjI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZOb-cN-YaV"/>
+                            <constraint firstItem="qc0-r8-SjI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="muy-jX-zGW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Amc-DJ-GVa" id="0cB-eX-ba0"/>
+                        <outlet property="moodLabel" destination="RKS-2B-sd6" id="ZmC-Qk-8Le"/>
+                        <outlet property="moodSlider" destination="c1N-br-nFi" id="Pg9-aO-WQ7"/>
+                        <outlet property="savedLabel" destination="1Sw-V9-Tmj" id="sTe-ao-oA5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-227" y="137"/>
         </scene>
     </scenes>
 </document>
