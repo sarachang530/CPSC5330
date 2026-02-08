@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		577645AD2F380D1D00F2E5D0 /* MyAdventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyAdventure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		577645AD2F380D1D00F2E5D0 /* MyAdventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MyAdventure.app; path = "/Users/SaraMBP/Documents/Auburn-mac/CPSC5330/M5Assignment/MyAdventure/build/Debug-iphoneos/MyAdventure.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,16 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				577645AF2F380D1D00F2E5D0 /* MyAdventure */,
-				577645AE2F380D1D00F2E5D0 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		577645AE2F380D1D00F2E5D0 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				577645AD2F380D1D00F2E5D0 /* MyAdventure.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,7 +99,7 @@
 			mainGroup = 577645A42F380D1D00F2E5D0;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 577645AE2F380D1D00F2E5D0 /* Products */;
+			productRefGroup = 577645A42F380D1D00F2E5D0;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -147,6 +138,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyAdventure/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyAdventure;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.adventure-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -178,6 +171,8 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MyAdventure/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyAdventure;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.adventure-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
